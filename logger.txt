@@ -1,0 +1,47 @@
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "location": {
+        "lat": 23.0,
+        "lng": 20.0
+    },
+    "name": "testing place",
+    "accuracy": 50,
+    "phone_number": "1323001211",
+    "address": "Random test place",
+    "types": [
+        "permanent",
+        "temporary"
+    ],
+    "website": "random.com",
+    "language": "English"
+}
+HTTP/1.1 200 OK
+Date: Mon, 28 Oct 2024 16:00:16 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "1908a9cab961e1aa1d9e9baca4328bb3",
+    "scope": "APP",
+    "reference": "78dc1055e1bb96a5b16fe64410ad104e78dc1055e1bb96a5b16fe64410ad104e",
+    "id": "78dc1055e1bb96a5b16fe64410ad104e"
+}
