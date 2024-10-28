@@ -4,4 +4,3 @@ Feature: Validating place api
     When User calls "AddPlaceApi" with post request
     Then api call status code is 200
     And "status" in response body is "OK"
-
