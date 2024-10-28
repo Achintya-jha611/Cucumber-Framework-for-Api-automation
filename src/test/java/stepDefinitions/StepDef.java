@@ -17,6 +17,7 @@ import test.AddPlaceGoogleMaps;
 import test.Locations;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,9 +31,9 @@ public class StepDef extends utils {
     Response resp;
 
     @Given("Add place valid payload")
-    public void add_place_valid_payload() throws FileNotFoundException {
+    public void add_place_valid_payload() throws IOException {
         // Write code here that turns the phrase above into concrete actions
-        RestAssured.baseURI="https://rahulshettyacademy.com";
+
         TestDataBuild T=new TestDataBuild();
         AddPlaceGoogleMaps a=T.addPlace();
         //RequestSpecification req=new RequestSpecBuilder().setBaseUri(baseURI).setContentType(ContentType.JSON).build();now we moved this line to utils file
