@@ -43,4 +43,9 @@ public class TestDataBuild {
         a.setLanguage("English");
         return a;
     }
+    public String getDeletePayload(String place_id){
+        {
+            return "{\r\n    \"place_id\":\""+place_id+"\"\r\n}";
+        }
+    }
 }
