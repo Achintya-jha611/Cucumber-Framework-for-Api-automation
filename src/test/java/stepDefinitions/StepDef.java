@@ -11,6 +11,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
+import resources.ApiResources;
 import resources.TestDataBuild;
 import resources.utils;
 import test.AddPlaceGoogleMaps;
@@ -41,10 +42,17 @@ public class StepDef extends utils {
 
         System.out.println(res);
     }
-        @When("User calls {string} with post request")
-        public void user_calls_with_post_request(String string) {
+        @When("User calls {string} with {string} request")
+        public void user_calls_with_post_request(String string,String httpMethod) {
+            ApiResources resource=ApiResources.valueOf(string);//calling enum class to fetch values
             resspec=new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
-            resp= res.when().post("/maps/api/place/add/json").then().spec(resspec).extract().response();
+            if(httpMethod.equalsIgnoreCase("post")){
+                resp= res.when().post(resource.getResource());
+            }
+            else if (httpMethod.equalsIgnoreCase("get")){
+                resp= res.when().get(resource.getResource());
+            }
+
             String respo= resp.asString();
             System.out.println(respo);
         }
