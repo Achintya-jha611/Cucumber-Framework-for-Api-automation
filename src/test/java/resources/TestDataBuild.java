@@ -1,7 +1,7 @@
 package resources;
 
-import test.AddPlaceGoogleMaps;
-import test.Locations;
+import pojo.AddPlaceGoogleMaps;
+import pojo.Locations;
 
 import java.util.ArrayList;
 import java.util.List;

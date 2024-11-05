@@ -3,8 +3,6 @@ package stepDefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.RestAssured;
-import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
@@ -14,15 +12,10 @@ import io.restassured.specification.ResponseSpecification;
 import resources.ApiResources;
 import resources.TestDataBuild;
 import resources.utils;
-import test.AddPlaceGoogleMaps;
-import test.Locations;
+import pojo.AddPlaceGoogleMaps;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
-import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
 import static org.testng.AssertJUnit.assertEquals;
 
